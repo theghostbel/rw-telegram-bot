@@ -24,7 +24,11 @@ app.use(bodyParser.raw({ type: "application/vnd.custom-type" }));
 app.use(bodyParser.text({ type: "text/html" }));
 
 app.get("/", async (req, res) => {
-  res.json({ Hello: "World" });
+  res.json({ Hello: "World!" });
+});
+
+app.get("/alive", async (req, res) => {
+  res.json({ alive: true });
 });
 
 app.listen(port, () => {
