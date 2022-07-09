@@ -11,6 +11,7 @@ const bot = new Telegraf(process.env.TELEGRAM_BOT_TOKEN);
 
 bot.start(ctx => ctx.reply("Welcome"));
 bot.hears("hello", ctx => {
+  console.log('hello recevied')
   ctx.reply("Hello to you too!");
 });
 
